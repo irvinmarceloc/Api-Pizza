@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+#Modelo Ingrediente
+class Ingrediente(models.Model):
+    nombre=models.CharField(max_length=30)
+    categoria=models.BooleanField()
