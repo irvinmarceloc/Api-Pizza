@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'Usuario',
     'rest_framework.authtoken',
+    'pizza',
 ]
 
 
