@@ -5,5 +5,5 @@ from .serializers import UsuarioSerializer
 
 class UsuarioList(generics.ListCreateAPIView):
     queryset = Usuario.objects.all() 
-    serializers_class = UsuarioSerializer
+    serializer_class = UsuarioSerializer
 
