@@ -10,11 +10,13 @@ class PizzaModelSerializer(serializers.ModelSerializer):
         """Meta class."""
 
         model = Pizza
-        fields = (
+        fields = [
             'nombre',
             'precio',
+            'ingredientes',
             'activo'
-        )
+        ]
+        depth = 1
 
 class PizzaSerializer(serializers.Serializer):
 

@@ -1,15 +1,15 @@
 # Django
-from django.urls import include, path
+from django.conf.urls import url, include
 
 # Django REST Framework
 from rest_framework.routers import DefaultRouter
 
 # Views
-from pizza import views
+from .views import PizzaViewSet
 
 router = DefaultRouter()
-router.register(r'pizza', views.PizzaModelSerializer, basename='pizza')
+router.register("pizza", PizzaViewSet, basename="pizza")
 
 urlpatterns = [
-    path('', include(router.urls))
+    url('', include(router.urls)),
 ]
