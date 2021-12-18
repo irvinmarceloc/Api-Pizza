@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "8c7b5fe4-cd7a-46a2-8e82-ed21627784fd",
+		"name": "TDP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login_con_token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin3\",\n    \"password\":\"a1234567890\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api_generate_token/?username=admin3&password=a1234567890",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api_generate_token",
+						""
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "admin3"
+						},
+						{
+							"key": "password",
+							"value": "a1234567890"
+						}
+					]
+				},
+				"description": "Envia un token, usuario y contraseña de prueba \nuser: admin3\npassword: a1234567890"
+			},
+			"response": []
+		},
+		{
+			"name": "listar_pizza",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"connection": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Token 235d9ac00d79c706e54dff913240fb4e9b095498",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 235d9ac00d79c706e54dff913240fb4e9b095498",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/1.0/usuario/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"1.0",
+						"usuario",
+						""
+					]
+				},
+				"description": "Puede listar todas las pizzas \nO solamente una agregando el numero de id de la pizza /1/"
+			},
+			"response": []
+		}
+	]
+}
