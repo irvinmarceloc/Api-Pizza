@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'Usuario',
     'rest_framework.authtoken',
     'pizza',
     'ingrediente', 

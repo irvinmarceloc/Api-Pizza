@@ -19,6 +19,6 @@ from rest_framework.authtoken import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/1.0/', include('Usuario.urls')),
+    #url(r'^api/1.0/', include('Usuario.urls')),
     url(r'api_generate_token/',views.obtain_auth_token),
 ]
