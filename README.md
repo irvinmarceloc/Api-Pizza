@@ -2,7 +2,7 @@
 
 ### Levantar el servidor
 
-Pasos para poder ejecutar, probado en un entorno ubuntu20.04.3_
+Pasos para poder ejecutar, probado en un entorno ubuntu20.04.3
 ### Paso0_
 ```
 cd /usr/local
@@ -11,23 +11,23 @@ cd /usr/local
 git clone https://github.com/irvinmarceloc/Api-Pizza 
 ```
 
-### Paso 1 _
+### Paso 1
 ```
 sudo apt install python3-pip
 ```
 
-### Paso 2 _ 
+### Paso 2
 ```
 pip3 install -r requeriments.txt
 ```
 
-### Paso 3 _ 
+### Paso 3
 ```
 cd /user/local/Api-Pizza/api-pizza
 ```
 
-### Paso 4 _
+### Paso 4
 ```
-python3 manage.py runserver  _
+python3 manage.py runserver 
 ```
 
