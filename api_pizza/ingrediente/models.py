@@ -2,6 +2,10 @@ from django.db import models
 
 #Modelo Ingrediente
 class Ingrediente(models.Model):
-    id = models.IntegerField(primary_key=True)
-    nombre=models.CharField(max_length=30)
+    nombre=models.CharField(primary_key=True, max_length=30)
     
+    class Meta:
+        ordering = ['nombre']
+
+    def __str__(self):
+        return self.nombre
