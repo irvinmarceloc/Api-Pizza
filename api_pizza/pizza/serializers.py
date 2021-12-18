@@ -21,6 +21,8 @@ class PizzaModelSerializer(serializers.ModelSerializer):
 class PizzaSerializer(serializers.Serializer):
 
     nombre= serializers.HiddenField(default=serializers.CurrentUserDefault())
+    nombre= serializers.CharField() 
+    ingredientes= serializers.CharField() 
     precio= serializers.IntegerField()
     activo= serializers.BooleanField()
 
