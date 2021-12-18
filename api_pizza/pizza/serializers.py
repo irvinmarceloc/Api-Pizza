@@ -11,7 +11,6 @@ class PizzaModelSerializer(serializers.ModelSerializer):
 
         model = Pizza
         fields = (
-            'id',
             'nombre',
             'precio',
             'activo'
@@ -19,7 +18,6 @@ class PizzaModelSerializer(serializers.ModelSerializer):
 
 class PizzaSerializer(serializers.Serializer):
 
-    id= serializers.IntegerField()
     nombre= serializers.HiddenField(default=serializers.CurrentUserDefault())
     precio= serializers.IntegerField()
     activo= serializers.BooleanField()
