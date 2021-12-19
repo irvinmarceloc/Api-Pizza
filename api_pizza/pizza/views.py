@@ -28,17 +28,15 @@ class PizzaViewSet(viewsets.ModelViewSet):
         new_pizza.save()
 
         for ingrediente in data["ingredientes"]:
-            ingrediente_obj = Ingrediente.objects.get(ingrediente_name=ingrediente["nombre"])
+            ingrediente_obj = Ingrediente.objects.get(nombre=ingrediente["nombre"])
             new_pizza.ingredientes.add(ingrediente_obj)
         
         serializer = PizzaSerializer(new_pizza)
 
         return Response(serializer.data)
 
-        return super().create(request, *args, **kwargs)
-
-class PizzaViewSet(viewsets.ModelViewSet):
-    serializers_class = PizzaSerializer
+class IngredienteViewSet(viewsets.ModelViewSet):
+    serializers_class = IngredienteSerializer
 
     def get_queryset(self):
         ingrediente = Ingrediente.objects.all()

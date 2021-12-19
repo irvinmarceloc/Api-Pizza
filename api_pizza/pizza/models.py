@@ -5,9 +5,9 @@ from ingrediente.models import Ingrediente
 class Pizza(models.Model):
     id= models.IntegerField(primary_key=True)
     nombre=models.CharField(max_length=30)
-    ingredientes = models.ManyToManyField(Ingrediente)
     precio=models.IntegerField()
     activo=models.BooleanField()
+    ingredientes = models.ManyToManyField(Ingrediente)
 
     
     def __str__(self):
