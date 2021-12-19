@@ -31,7 +31,7 @@ class PizzaViewSet(viewsets.ModelViewSet):
             ingrediente_obj = Ingrediente.objects.get(ingrediente_name=ingrediente["nombre"])
             new_pizza.ingredientes.add(ingrediente_obj)
         
-        serializer = PizzaModelSerializer(new_pizza)
+        serializer = PizzaSerializer(new_pizza)
 
         return Response(serializer.data)
 

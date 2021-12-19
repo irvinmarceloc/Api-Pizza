@@ -7,6 +7,7 @@ class PizzaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pizza
         fields = [
+            'id',
             'nombre',
             'precio',
             'ingredientes',
