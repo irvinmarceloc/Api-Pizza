@@ -3,7 +3,7 @@
 ### Levantar el servidor
 
 Pasos para poder ejecutar, probado en un entorno ubuntu20.04.3
-### Paso0_
+### Paso0
 ```
 cd /usr/local
 ```
