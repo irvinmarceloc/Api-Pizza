@@ -4,8 +4,8 @@ from rest_framework.response import Response
 from pizza.models import Pizza
 from ingrediente.models import Ingrediente
 
-from .serializers import PizzaModelSerializer, PizzaSerializer
-from ingrediente.serializers import IngredienteModelSerializer
+from .serializers import PizzaSerializer
+from ingrediente.serializers import IngredienteSerializer
 
 from django.shortcuts import render
 
