@@ -23,7 +23,7 @@ class PizzaViewSet(viewsets.ModelViewSet):
         
         data = request.data 
         
-        new_pizza = Pizza.objects.create(nombre=data["nombre"], precio=data["precio"],activo=data["activo"] ) 
+        new_pizza = Pizza.objects.create(id=data["id"], nombre=data["nombre"], precio=data["precio"],activo=data["activo"] ) 
         
         new_pizza.save()
 
@@ -36,3 +36,10 @@ class PizzaViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
         return super().create(request, *args, **kwargs)
+
+class PizzaViewSet(viewsets.ModelViewSet):
+    serializers_class = PizzaSerializer
+
+    def get_queryset(self):
+        ingrediente = Ingrediente.objects.all()
+        return ingrediente 

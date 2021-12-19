@@ -13,5 +13,5 @@ class PizzaSerializer(serializers.ModelSerializer):
             'ingredientes',
             'activo'
         ]
-
+    depth=1
 
